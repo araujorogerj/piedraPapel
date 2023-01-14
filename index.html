@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Piedra papel</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="titulo">
+        <h1>Piedra, papel o tijeras</h1>
+    </div>
+    <div class="game">
+        <div class="scoreCounter">
+            <h1>Resultados</h1>
+            <div class="scores">
+                <h2>Pc: </h2>
+                <h2>Usuario: </h2>
+            </div>
+        </div>
+        <div class="gameContainer">
+            <div class="innerSquare">
+                <div class="enunciado">
+                    <h2>La pc escoge:</h2>
+                </div>
+                <div class="pcOptionSelected">
+                    <div class="resultContainer" id="result-container">
+                        <div class="resultText" id="result-text">
+                            <h1 id="win-text">Ganaste :)</h1>
+                            <h1 id="lose-text">Perdiste :(</h1>
+                            <h1 id="draw-text">Empate</h1>
+                        </div>
+                        <div class="resultButton" id="result-button" onclick="restart()">
+                            <p>Jugar de nuevo</p>
+                        </div>
+                    </div>
+                    <img class ="pcImg"src="rock.png" id="pc-rock">
+                    <img class ="pcImg"src="paper.png" id="pc-paper">
+                    <img class ="pcImg"src="scissors.png" id="pc-scissors">
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <div class="optionRock" id="option-button">
+                <div class="innerOptionButton" id="inner-rock">
+                    <img src="rock.png" onClick="selectRock()">
+                </div>
+            </div>
+            <div class="optionPaper" id="option-button">
+                <div class="innerOptionButton" id="inner-paper">
+                    <img src="paper.png" onClick="selectPaper()">
+                </div>
+            </div>
+            <div class="optionScissors" id="option-button">
+                <div class="innerOptionButton" id="inner-scissors">
+                    <img src="scissors.png" onClick="selectScissors()">                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/piedrapapel.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

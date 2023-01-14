@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: -1;
+}
+
+.titulo{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    
+}
+
+.titulo h1{
+    color: #93fff2;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameContainer{
+    background: none;
+    border: solid;
+    border-color: #93fff2;
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+
+.innerSquare{
+    background: none;
+    width: 95%;
+    height: 95%;
+    border: solid;
+    border-color: #93fff2;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    z-index: 5;
+}
+
+#option-button{
+    border-radius: 50%;
+    background: none;
+    border: solid;
+    border-color: #93fff2;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerOptionButton{
+    border-radius: 50%;
+    background: none;
+    border: solid;
+    border-color: #93fff2;
+    width: 90%;
+    height: 90%;
+    transition: 0.7s;
+}
+
+.innerOptionButton:hover{
+    cursor: pointer;
+    background-color: rgba(103, 255, 242, 0.418);
+    transition: 0.7s;
+}
+
+.innerOptionButton img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: none;
+}
+
+.enunciado{
+    color: #93fff2;
+    display: flex;
+    justify-content: center;
+}
+
+.scoreCounter{
+    color: #93fff2;
+}
+
+.scores{
+    display: flex;
+    justify-content: space-between;
+}
+
+.scoreCounter h1{
+    width: 350px;
+}
+
+.pcOptionSelected{
+    width: 330px;
+    height: 330px;
+    position: relative;
+}
+
+.pcImg{
+    width: 92%;
+    height: 92%;
+    transition: 0.7s;
+    position: absolute;
+    opacity: 0%;
+}
+
+.resultContainer{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    transition: 3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0%;
+}
+
+.resultButton{
+    width: 150px;
+    height: 50px;
+    background-color: #93fff2;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    transition: 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+}
+
+.resultText{
+    color: #93fff2;
+
+}
+
+#win-text{
+    visibility: hidden;
+}
+
+#lose-text{
+    visibility: hidden;
+}
+
+#draw-text{
+    visibility: hidden;
+}
+.resultButton:hover{
+    cursor: pointer;
+    background-color: #83e4d8;  
+    padding: 4px;
+    transition: 0.7s;
+    font-size: 18px;
+}

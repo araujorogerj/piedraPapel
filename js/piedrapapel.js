@@ -33,13 +33,28 @@ function showImgs(){
         pcPaper.style.opacity="100%";
         pcScissors.style.visibility="hidden";
         pcScissors.style.opacity="0%";
-    } else{
+    } else if(pcOption == scissors){
         pcRock.style.visibility="hidden";
         pcRock.style.opacity="0%";
         pcPaper.style.visibility="hidden"
         pcPaper.style.opacity="0%";
         pcScissors.style.visibility="visible";
         pcScissors.style.opacity="100%";
+    } 
+    }
+
+function refreshImg(){
+    var pcRock = document.getElementById("pc-rock");
+    var pcPaper = document.getElementById("pc-paper");
+    var pcScissors = document.getElementById("pc-scissors");
+    if (pcOption == "null"){
+        pcRock.style.visibility="hidden";
+        pcRock.style.opacity="0%";
+        pcPaper.style.visibility="hidden"
+        pcPaper.style.opacity="0%";
+        pcScissors.style.visibility="hidden";
+        pcScissors.style.opacity="0%";
+
     }
 }
 
@@ -122,5 +137,8 @@ function restart(){
 
     resultContainer.style.visibility = "hidden";
     resultContainer.style.opacity = "0%";
+    result = "";
+    pcOption = "null";
 
+    refreshImg();
 }

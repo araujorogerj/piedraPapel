@@ -43,6 +43,21 @@ function showImgs(){
     }
 }
 
+function refreshImg(){
+    var pcRock = document.getElementById("pc-rock");
+    var pcPaper = document.getElementById("pc-paper");
+    var pcScissors = document.getElementById("pc-scissors");
+    if (pcOption == "null"){
+        pcRock.style.visibility="hidden";
+        pcRock.style.opacity="0%";
+        pcPaper.style.visibility="hidden"
+        pcPaper.style.opacity="0%";
+        pcScissors.style.visibility="hidden";
+        pcScissors.style.opacity="0%";
+
+    }
+}
+
 
 function selectRock(){
     option = rock;

@@ -1,5 +1,6 @@
 var rock = "rock", paper = "paper", scissors = "scissors", win = "Ganaste", draw = "Empate", lose = "Perdiste";
 var option, pcOption, result;
+var pcWin, userWin, pcCounter = 0, userCounter = 0;
 
 function pcSelect(){
     number = Math.floor(Math.random() * 3);
@@ -81,27 +82,33 @@ function gameLogic() {
     pcSelect();
     if (option == paper && pcOption == scissors){
         result = lose;
+        pcWin = true;
         console.log(lose);
     } else if(option == paper && pcOption == rock){
         result = win;
+        userWin = true;
         console.log(win);
     } else if(option == paper && pcOption == paper){
         result = draw;
         console.log(draw);
     } else if(option == rock && pcOption == paper){
         result = lose;
+        pcWin = true;
         console.log(lose);
     } else if(option == rock && pcOption == scissors){
         result = win;
+        userWin = true;
         console.log(win);
     } else if(option == rock && pcOption == rock){
         result = draw;
         console.log(draw);
     } else if(option == scissors && pcOption == rock){
         result = lose;
+        pcWin = true;
         console.log(lose);
     } else if(option == scissors && pcOption == paper){
         result = win;
+        userWin = true;
         console.log(win);
     } else {
         result = draw;
@@ -130,6 +137,7 @@ function showResult(){
         drawText.style.visibility = "hidden";
         loseText.style.visibility = "visible";
     }
+    showCounter();
 }
 
 function restart(){
@@ -141,4 +149,24 @@ function restart(){
     pcOption = "null";
 
     refreshImg();
+}
+
+function counter(){
+    if(pcWin === true){
+        pcCounter = pcCounter + 1;
+        pcWin = false;        
+    } else if (userWin === true){
+        userCounter = userCounter + 1;
+        userWin = false;
+    } else {
+        userCounter = userCounter;
+        pcCounter = pcCounter;
+    }
+}
+
+function showCounter(){
+    counter();
+    
+    document.getElementById('pc-counter').innerHTML = pcCounter.toString();
+    document.getElementById('user-counter').innerHTML = userCounter.toString();
 }

@@ -129,7 +129,7 @@
 .pcImg{
     width: 92%;
     height: 92%;
-    transition: 0.7s;
+    transition: 0.4s;
     position: absolute;
     opacity: 0%;
 }
@@ -139,7 +139,7 @@
     height: 100%;
     background-color: black;
     position: absolute;
-    transition: 3s;
+    transition: 1.5s;
     display: flex;
     align-items: center;
     justify-content: space-around;
